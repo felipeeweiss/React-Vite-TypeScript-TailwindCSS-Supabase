@@ -1,0 +1,14 @@
+import React from 'react';
+import { AuthProvider } from '../features/auth/hooks/AuthProvider';
+
+interface ProvidersProps {
+  children: React.ReactNode;
+}
+
+export const Providers = ({ children }: ProvidersProps) => {
+  return (
+    <AuthProvider>
+      {children}
+    </AuthProvider>
+  );
+};
