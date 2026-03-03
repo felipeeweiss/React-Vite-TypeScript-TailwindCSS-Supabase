@@ -38,8 +38,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     setUser(null);
   };
 
+  const resetPassword = async (email: string) => {
+    await authService.resetPassword(email);
+  };
+
   return (
-    <AuthContext.Provider value={{ user, loading, signIn, signOut, signUp }}>
+    <AuthContext.Provider value={{ user, loading, signIn, signOut, signUp, resetPassword }}>
       {children}
     </AuthContext.Provider>
   );
