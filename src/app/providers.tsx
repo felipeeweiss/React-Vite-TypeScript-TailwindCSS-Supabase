@@ -6,9 +6,5 @@ interface ProvidersProps {
 }
 
 export const Providers = ({ children }: ProvidersProps) => {
-  return (
-    <AuthProvider>
-      {children}
-    </AuthProvider>
-  );
+  return <AuthProvider>{children}</AuthProvider>;
 };

@@ -21,5 +21,5 @@ export const authService = {
     return supabase.auth.signInWithOAuth({ provider });
   },
 
-  getUser: () => supabase.auth.getUser()
+  getUser: () => supabase.auth.getUser(),
 };
