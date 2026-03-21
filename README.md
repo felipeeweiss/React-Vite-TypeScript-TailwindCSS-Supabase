@@ -17,10 +17,10 @@ This is a robust, production-ready boilerplate designed to kickstart your web ap
 
 This boilerplate comes out of the box with a fully functional authentication system:
 
-- **Standard Auth:** Email and Password Login & Sign Up.
+- **Standard Auth:** Email and Password Sign In & Sign Up.
 - **Social Auth (OAuth):**
-- Log in with **GitHub**.
-- Log in with **Google Account**.
+- Sign in with **GitHub**.
+- Sign in with **Google Account**.
 
 - **Protected Routes:** Ready-to-use logic to restrict access to authenticated users only.
 - **Responsive UI:** Clean layouts built with Tailwind CSS.
@@ -51,8 +51,8 @@ Follow these steps to get your local development environment running:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/FelipeEWeiss/ReactJS-Typescript-TailwindCSS-Supabase
-cd ReactJS-Typescript-TailwindCSS-Supabase
+git clone https://github.com/FelipeEWeiss/React-Vite-TypeScript-TailwindCSS-Supabase
+cd React-Vite-TypeScript-TailwindCSS-Supabase
 
 ```
 
