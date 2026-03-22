@@ -14,18 +14,23 @@ export const AuthLayout = () => {
     }
   }, [user, loading, navigate]);
 
-  if (loading) {
-    return null;
-  }
+  if (loading) return null;
 
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center"
+      className="relative flex items-center justify-center w-full min-h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${BackgroundImg})` }}
     >
-      <div className="flex flex-col border border-gray-300 absolute w-100 rounded-xl p-8 gap-4 bg-white right-[10%] top-1/2 -translate-y-1/2">
+      <div
+        className="
+          flex flex-col border border-gray-300 rounded-xl p-8 gap-4 bg-white 
+          /* Mobile: Largura flexível, sem posição absoluta */
+          w-[95%] max-w-[400px] relative
+          md:absolute md:right-[10%] md:top-1/2 md:-translate-y-1/2 md:w-100
+        "
+      >
         <div className="flex gap-2 items-center">
-          <img src={ReactImg} />
+          <img src={ReactImg} alt="React Logo" />
           <h3 className="font-medium text-xl text-gray-900">Project name</h3>
         </div>
 

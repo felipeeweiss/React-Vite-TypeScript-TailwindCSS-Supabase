@@ -43,7 +43,7 @@ export const SignIn = () => {
     }
   }
 
-  async function handleSocialLogin(provider: 'google' | 'github') {
+  async function handleSocialSignIn(provider: 'google' | 'github') {
     try {
       await signInWithProvider(provider);
     } catch (error) {
@@ -95,25 +95,36 @@ export const SignIn = () => {
 
       <div className="flex items-center w-full my-4">
         <div className="grow border-t border-gray-300" />
-        <span className="mx-4 text-sm text-gray-400">OR</span>
+        <span className="mx-4 text-sm text-gray-400 uppercase font-medium">
+          <span className="md:hidden">Or continue with</span>
+          <span className="hidden md:inline">Or</span>
+        </span>
         <div className="grow border-t border-gray-300" />
       </div>
 
-      <Button
-        text="Continue with Google"
-        variant="secondary"
-        onClick={() => handleSocialLogin('google')}
-      >
-        <FaGoogle className="w-5 h-5" />
-      </Button>
+      <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
+        <Button
+          variant="secondary"
+          onClick={() => handleSocialSignIn('google')}
+          className="flex items-center justify-center gap-2"
+        >
+          <FaGoogle className="w-5 h-5" />
+          <div>
+            <span className="hidden md:inline">Continue with </span>Google
+          </div>
+        </Button>
 
-      <Button
-        text="Continue with GitHub"
-        variant="secondary"
-        onClick={() => handleSocialLogin('github')}
-      >
-        <FaGithub className="w-5 h-5" />
-      </Button>
+        <Button
+          variant="secondary"
+          onClick={() => handleSocialSignIn('github')}
+          className="flex items-center justify-center gap-2"
+        >
+          <FaGithub className="w-5 h-5" />
+          <div>
+            <span className="hidden md:inline">Continue with </span>GitHub
+          </div>
+        </Button>
+      </div>
 
       <div className="flex justify-center gap-1">
         <span className="text-sm text-gray-500">Don't have an account?</span>

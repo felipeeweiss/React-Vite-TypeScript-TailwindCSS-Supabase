@@ -7,7 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = ({
-  text = 'Hello',
+  text = '',
   variant = 'primary',
   children,
   className,
