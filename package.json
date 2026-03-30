@@ -12,6 +12,7 @@
   "dependencies": {
     "@felipeeweiss/react-toast-message": "^0.0.4",
     "@supabase/supabase-js": "^2.98.0",
+    "@types/react-router-dom": "^5.3.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
